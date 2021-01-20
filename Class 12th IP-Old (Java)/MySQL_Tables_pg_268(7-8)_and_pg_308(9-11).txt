@@ -1,0 +1,83 @@
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   pg 266   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+create table Loan_Accounts
+(
+Acc_No int primary key auto_increment,
+Cust_Name varchar(20),
+Loan_Amount float,
+Installments int,
+Int_Rate float,
+Start_Date date,
+Interest float
+);
+
+
+
+insert into Loan_Accounts(Cust_Name,Loan_Amount,Installments,Int_Rate,Start_Date) 
+		   values('R.K.Gupta',300000,36,12,'2009/07/19'),
+                         ('S.P.Sharma',500000,48,10,'2008/03/22'),
+                         ('K.P.Jain',300000,36,null,'2007/03/08'),
+                         ('M.P.Yadav',800000,60,10,'2008/12/06'),
+                         ('S.P.Sinha',200000,36,12.5,'2010/01/03'),
+                         ('P.Sharma',700000,60,12.5,'2008/06/05'),
+                         ('K.S.Dhall',500000,48,null,'2008/03/05');
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   pg 308   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+CREATE TABLE STUDENTS
+(Admno int Primary Key,
+Name varchar (20),
+Class int,
+Sec char (3),
+Rno int,
+Address varchar (100),
+Phone varchar(200)
+);
+
+
+
+Insert into Students values(1271,'Utkarsh Madaan',12 ,'C', 1 ,'C-32, Punjabi Bagh', '4356154');
+Insert into Students values(1324,'Naresh Sharma' ,10 ,'A', 1 ,'31, Mohan Nagar', '435654');
+Insert into Students values(1325,'Md.Yusuf', 12 , 'A', 2 ,'12/21, Chand Nagar', '145654');
+Insert into Students values(1328,'Sumedha' , 10, 'B', 23 ,'59, Moti Nagar', '4135654');
+Insert into Students values(1364,'Subya Akhtar', 11 ,'B', 13 ,'12,Janakpuri', null);
+Insert into Students values(1434,'Varuna', 12 , 'B', 21 ,'69,Rohini', null);
+Insert into Students values(1461,'David DSouza' , 11, 'B', 1 ,'D-34, Model Town','243554, 99787665');
+Insert into Students values(2324,'Satinder Singh' ,12 ,'C', 1 ,'1/2, Gulmohar Park', '143654');
+Insert into Students value(2328, 'Peter Jones',10 ,'A', 18 ,'21/32B,Vishal Enclave', '24356154');
+Insert into Students values(2371,'Mohini Mehta' ,11 ,'C', 12 ,'37,Raja Garden', '435654, 6765787');
+
+
+
+
+CREATE TABLE SPORTS
+(Admno int,
+Game varchar(20),
+CoachName varchar(30),
+Grade char(2),
+foreign key(admno) references students(admno)
+);
+
+
+Insert into Sports values(1324,'Cricket', 'Narendra', 'A');
+Insert into Sports values(1364,'Volleyball',' M.P. Singh', 'A');
+Insert into Sports values(1271,'Volleyball', ' M.P. Singh', 'B');
+Insert into Sports values(1434,'Basket Ball', 'I. Malhotra','B');
+Insert into Sports values(1461,'Cricket', 'Narendra', 'B');
+Insert into Sports values(2328,'Basket Ball', 'I. Malhotra', 'A');
+Insert into Sports values(2371, 'Basket Ball', 'I. Malhotra', 'A');
+Insert into Sports values(1271, 'Basket Ball','I. Malhotra', 'A');
+Insert into Sports values(1434,'Cricket', 'Narendra', 'A');
+Insert into Sports values(2328,'Cricket', 'Narendra', 'B');
+Insert into Sports values(1364,'Basket Ball','I. Malhotra','B');
+
+
+
+
